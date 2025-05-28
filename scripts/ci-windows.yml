@@ -1,0 +1,23 @@
+name: CI/CD Power BI Windows
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Afficher fichiers dashboards
+      run: dir dashboards
+
+    - name: Lancer script PowerShell d'ouverture PBIX
+      shell: pwsh
+      run: |
+        Write-Host "Lancement du script PowerShell"
+        .\scripts\ouvrir-pbix.ps1
