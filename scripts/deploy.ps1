@@ -39,3 +39,4 @@ Start-Sleep -Seconds 2
 Start-Sleep -Seconds 5  # Attendre la fin de la publication
 
 Write-Host "✅ Publication terminée ! Vérifiez dans le service Power BI." -ForegroundColor Green
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
